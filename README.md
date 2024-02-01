@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This template is designed to simplify the setup process, allowing you to dive straight into the core aspects of your project. Hope it helps.
+This template is designed to simplify the setup process, allowing you to dive straight into the core aspects of your project.
 
 ### Clone Repository
 
@@ -24,7 +24,7 @@ Then run poetry
         * Is the project core
         * Were we deleted some settings
     * The app folder 
-        * views,template,static 
+        * views, template, static 
 * Template
     * Password Generator
         * This template contains the program password generator  based on the example demonstrated in the module 2.2 videos
@@ -44,6 +44,6 @@ Then run poetry
     * django.contrib.auth.context_processors.auth
     * django.contrib.messages.context_processors.messages
 
-Plese feel free to use the repository as a template to make it esiaer. If you find something worng let me know.
+Please feel free to use the repository as a template to make it easier. If you find something wrong, let me know.
 
 Hope it helps
