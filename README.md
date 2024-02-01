@@ -40,10 +40,10 @@ Then run poetry
     * django.middleware.csrf.CsrfViewMiddleware
     * django.contrib.auth.middleware.AuthenticationMiddleware
     * django.contrib.messages.middleware.MessageMiddleware
-* TEMPALTES `context_processors`
+* TEMPLATES `context_processors`
     * django.contrib.auth.context_processors.auth
     * django.contrib.messages.context_processors.messages
 
-Please feel free to use the repository as a template to make it easier. If you find something wrong, let me know.
+Please use the repository as a template to make it easier. If you find something wrong, let me know.
 
 Hope it helps
