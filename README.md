@@ -8,7 +8,7 @@ This template is designed to simplify the setup process, allowing you to dive st
 
 Clone the repository:
 
-    $ git clone {{project_name}}
+    $ git clone git@github.com:EdwinTJ/DJANGO_Template.git {{project_name}}
     $ cd {{project_name}}
     
 Then run poetry
