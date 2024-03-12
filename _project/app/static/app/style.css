@@ -2,22 +2,103 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form{
+body {
+    background-color: #f2f2f2; /* Light gray background */
+    margin-top: 50px;
+
+}
+header {
+    background-color: #ffcc66; /* Light orange background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: #333; /* Dark gray link color */
+    text-decoration: none;
+}
+
+/* Title */
+
+.title{
+    text-align: center;
+}
+
+/* ====== Card ====== */
+article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.text {
+    padding: 0 20px 20px;
+}
+
+/* ===== Form ===== */
+
+.form{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 10%;
-    border: 1px solid salmon;
-}
+    border: 1px solid #999; /* Dark gray border */
+    background-color: #fff; /* White background */}
 
-form input{
+.form input{
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid salmon;
+    border: 1px solid #999; /* Dark gray border */
 }
 
-button{
-    margin-bottom: 5px;
+
+/* ==== Table ===== */
+table.table {
+    width: 100%;
+    background-color: #fff; /* White background */
+    border-collapse: collapse;
+    border-width: 2px;
+    border-color: #666; /* Darker gray border */
+    border-style: solid;
+    color: #333; /* Dark gray text color */
+  }
+  
+table.table td, table.table th {
+    border-width: 2px;
+    border-color: #666; /* Darker gray border */
+    border-style: solid;
+    padding: 8px;
+  }
+  
+table.table thead {
+    background-color: #ffcc66; /* Light orange header background */
+    color: #333; /* Dark gray header text color */
+  }
+  
+/* === Button ==== */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc66; /* Light orange background */
+    color: #333; /* Dark gray text color */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffa500; /* Orange hover color */
 }

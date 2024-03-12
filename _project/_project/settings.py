@@ -40,6 +40,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'app.middleware.SessionMiddleware',
 ]
 
 ROOT_URLCONF = '_project.urls'

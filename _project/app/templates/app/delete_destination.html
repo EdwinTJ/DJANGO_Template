@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Edit destination</title>
     <link rel="stylesheet" href="{% static 'app/style.css' %}">
 </head>
 <body>
@@ -26,27 +26,17 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2 class="title">Recent Destinations</h2>
+        <h1 class="title">Edit Destination</h1>
 
-            {% if request.is_authenticated %}
-                {% if user_name%}
-                    <p >Welcome, {{ user_name }}!</p>
-                {% endif%}
-            {% else %}
-                <p>You are not signed in.</p>
-            {% endif %}
-            <ul>
-                {% for destination in destinations %}
-                    <article>
-                        <div class="text">
-                            <h3>{{ destination.name }}</h3>
-                            <p>{{ destination.review }}</p>
-                            <p>{{ destination.rating }}</p>
-                        </div>
-                    </article>
-                {% endfor %}
-            </ul>
+        <section>
+                <!-- Delete Form -->
+    <form method="post"  class="form">
+        {% csrf_token %}
+        <a>Destination: {{ destination.id }}</a>
+        <a>Destination: {{ destination.name }}</a>
+        <input type="hidden" name="action" value="delete">
+        <button type="submit" onclick="return confirm('Are you sure you want to delete this destination?');">Delete Destination</button>
+    </form>
         </section>
     </main>
 </body>

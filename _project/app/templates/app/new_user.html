@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>New User</title>
     <link rel="stylesheet" href="{% static 'app/style.css' %}">
 </head>
 <body>
@@ -26,27 +26,21 @@
         </nav>
     </header>
     <main>
+        <h1 class="title">Create a New User</h1>
         <section>
-            <h2 class="title">Recent Destinations</h2>
-
-            {% if request.is_authenticated %}
-                {% if user_name%}
-                    <p >Welcome, {{ user_name }}!</p>
-                {% endif%}
-            {% else %}
-                <p>You are not signed in.</p>
-            {% endif %}
-            <ul>
-                {% for destination in destinations %}
-                    <article>
-                        <div class="text">
-                            <h3>{{ destination.name }}</h3>
-                            <p>{{ destination.review }}</p>
-                            <p>{{ destination.rating }}</p>
-                        </div>
-                    </article>
-                {% endfor %}
-            </ul>
+            {% if error_message %}
+            <p>{{ error_message }}</p>
+        {% endif %}
+        <form method="post"  class="form">
+            {% csrf_token %}
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required minlength="3"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required minlength="8"><br>
+            <button type="submit">Create Account</button>
+        </form>
         </section>
     </main>
 </body>
